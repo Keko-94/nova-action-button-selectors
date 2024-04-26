@@ -328,11 +328,11 @@ export default {
 
         canModifyResource() {
             return (
-                this.resource.authorizedToReplicate ||
-                this.canBeImpersonated ||
-                (this.resource.authorizedToDelete && !this.resource.softDeleted) ||
-                (this.resource.authorizedToRestore && this.resource.softDeleted) ||
-                this.resource.authorizedToForceDelete
+                this.resource.authorizedToReplicate
+                    || this.canBeImpersonated
+                    || (this.resource.authorizedToDelete && !this.resource.softDeleted)
+                    || (this.resource.authorizedToRestore && this.resource.softDeleted)
+                    || this.resource.authorizedToForceDelete
             );
         },
 
