@@ -271,7 +271,7 @@ export default {
      */
     selectedAction() {
       if (this.selectedActionKey) {
-        return find(this.allActions, a => a.uriKey == this.selectedActionKey)
+        return find(this.allActions, a => a?.uriKey == this.selectedActionKey)
       }
     },
 
