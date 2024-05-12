@@ -27,7 +27,7 @@ export function useActions(props, emitter, store) {
 
   const selectedAction = computed(() => {
     if (state.selectedActionKey) {
-      return find(allActions.value, a => a.uriKey === state.selectedActionKey)
+      return find(allActions.value, a => a?.uriKey === state.selectedActionKey)
     }
   })
 
