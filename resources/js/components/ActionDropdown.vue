@@ -35,6 +35,7 @@
                     <template v-for="action in actions">
                         <button
                             v-if="action.showAsButton"
+                            v-bind="action.extraAttributes || {}"
                             :key="action.uriKey"
                             :dusk="`${triggerDuskAttribute}-${action.uriKey}`"
                             :title="action.name"
