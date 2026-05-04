@@ -5,6 +5,7 @@
             <template v-for="action in actions">
                 <button
                     v-if="action.showAsButton"
+                    v-bind="action.extraAttributes || {}"
                     :key="action.uriKey"
                     as="button"
                     :dusk="`${resource.id.value}-inline-action-${action.uriKey}`"
